@@ -1,0 +1,107 @@
+body {
+	background-color: lightgray;
+
+}
+h1{
+	color:green;
+	text-align: center;
+
+}
+
+.sidebar{
+	height:90%;
+	width:160px;
+	position:fixed;
+	background-color: blue;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	overflow-x: hidden;
+	padding-top: 20px
+
+}
+.sidebar a{
+	padding: 6px 8px 6px 16px;
+	text-decoration: none;
+	font-size: 25px;
+	color:black;
+}
+
+.main{
+	margin-left:150px;
+	padding: 10%;
+
+}
+.responsive{
+	max-width: 1000px;
+	margin: auto;
+	overflow: hidden;
+	max-height: auto%;
+	
+}	
+.content{
+	width: 35%;
+	margin:auto;
+	padding: 10px;
+	background-color:gray;
+	height: 100%;
+
+}
+h2{
+	text-align: center;
+	color:black;
+}
+.select{
+	width:55%;
+	padding: 10px;
+	margin:auto;
+	margin-left: 100px;
+	display: inline-block;
+	border:7px solid white;
+	border-radius: 4px;
+	box-sizing: border-box;
+	align-content: center;
+	background-color: blue;
+	height: 10%;
+}
+
+.select Submit{
+	width: 100%;
+	
+	color:white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer; 
+
+}
+.content2{
+	width: 15%;
+	margin:auto;
+
+	background-color:gray;
+	height: 10%;
+
+}
+table{
+	border-collapse: collapse;
+	width: 100%;
+}
+th, td{
+	text-align: left;
+	padding: 8px;
+}
+tr:nth-child(even){background-color: blue;}
+
+.content3{
+	width: 60%;
+	margin:auto;
+	padding: 100%;
+	background-color:gray;
+	height: 100%;
+	font-size: 24px;
+	
+
+}
+
