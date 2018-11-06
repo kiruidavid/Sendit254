@@ -55,3 +55,5 @@ This is where an admin can status of a delivery made
 #ADMIN CHANGE LOCATION
 This is where an admin can change the location of the delivery to a desired location
 
+https://kiruidavid.github.io/SendIT254/UI/index.html the host link
+
