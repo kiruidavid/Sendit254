@@ -25,7 +25,18 @@ class Parcel(object):
  	def get_delivery(self, delivery_number):
  		res = self.db
  		results = [result for result in res if result['delivery_number'] == str(delivery_number)]
- 		return results
+ 		return results 
+
+
+ 	def put_delivery(self, delivery_number):
+ 		res = self.db 
+ 		results = [result for result in res if result['delivery_number'] ==str(delivery_number)]
+ 		result= results[0]
+		result['status']= 'canceled'
+
+		
+
+ 	 	
  		
 
 	

@@ -25,6 +25,12 @@ class DataDelivery(Resource,Parcel):
 class SingleDelivery(Resource, Parcel):
 	def get(self, delivery_number):
 		res = Parcel.get_delivery(self, delivery_number)
+		return res 
+
+
+class CancelDelivery(Resource, Parcel):
+	def put(self, delivery_number):
+		res = Parcel.put_delivery(self, delivery_number)
 		return res
 	
 
