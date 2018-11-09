@@ -14,7 +14,7 @@ class DataDelivery(Resource,Parcel):
 		status = data["status"]
 
 		new_data = Parcel.create_order(self,parcel_to_order,location_to_pickup,location_to_deliever, status)
-		return {'message':new_data}
+		return {'message':'order is a success'}
 
 
 	def get(self):
