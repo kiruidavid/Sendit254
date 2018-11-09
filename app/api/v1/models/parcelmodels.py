@@ -21,4 +21,11 @@ class Parcel(object):
 	def get_all(self):
  		return self.db
 
+
+ 	def get_delivery(self, delivery_number):
+ 		res = self.db
+ 		results = [result for result in res if result['delivery_number'] == str(delivery_number)]
+ 		return results
+ 		
+
 	

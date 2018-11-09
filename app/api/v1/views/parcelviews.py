@@ -22,7 +22,11 @@ class DataDelivery(Resource,Parcel):
 		 return res 
 
 
-
+class SingleDelivery(Resource, Parcel):
+	def get(self, delivery_number):
+		res = Parcel.get_delivery(self, delivery_number)
+		return res
+	
 
 
 		
