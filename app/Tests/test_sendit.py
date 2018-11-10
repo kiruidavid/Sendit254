@@ -13,14 +13,14 @@ class TestDataParcel(unittest.TestCase):
 		self.app_context.push()
 
 
-	new_data = { 
+		new_data = { 
 		"delivery_number": "1",
 		"location_to_deliever": "buru",
 		"location_to_pickup": "tao",
 		"parcel_to_order": "money",
 		"status": "pending"
-	
-	}	
+
+		}	
 
 	def test_post(self):
 		response = self.client.post('/api/v1/datadelivery', data=json.dumps(self.new_data), content_type='application/json')
@@ -42,8 +42,8 @@ class TestDataParcel(unittest.TestCase):
 	def test_put(self):
 		response = self.client.get('/api/v1/cancel/1', data=json.dumps({"status":"canceled"}), content_type='application/json')
 		result = json.loads(response.data)
-		
-		
+
+
 class TestUserDeliver(unittest.TestCase):
 	def setUp(self):
 		self.app = create_app()
@@ -51,14 +51,14 @@ class TestUserDeliver(unittest.TestCase):
 		self.app_context = self.app.app_context()
 		self.app_context.push()
 
-	new_data = {
-    	"user_id":"3",	
+		new_data = {
+		"user_id":"3",	
 		"parcel_to_order":"books",
 		"location_to_pickup":"texas",
 		"location_to_deliever":"ruai"
 		} 
 
-   	def test_post(self):
+	def test_post(self):
 		response = self.client.post('/api/v1/user', data=json.dumps(self.new_data), content_type='application/json')
 		result = json.loads(response.data)
 		self.assertEqual(result['message'],'order is a success', msg="Assertion error not Equal" ) 
@@ -66,9 +66,8 @@ class TestUserDeliver(unittest.TestCase):
 	def test_getuser(self):
 		response = self.client.post('/api/v1/user/3', data=json.dumps(self.new_data), content_type='application/json')
 		result = json.loads(response.data)
-		
-	
 
 
 
- 
+
+
