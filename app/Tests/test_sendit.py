@@ -13,7 +13,7 @@ class TestDataParcel(unittest.TestCase):
 		self.app_context.push()
 
 
-		new_data = { 
+		self.new_data = { 
 		"delivery_number": "1",
 		"location_to_deliever": "buru",
 		"location_to_pickup": "tao",
@@ -51,7 +51,7 @@ class TestUserDeliver(unittest.TestCase):
 		self.app_context = self.app.app_context()
 		self.app_context.push()
 
-		new_data = {
+		self.new_data = {
 		"user_id":"3",	
 		"parcel_to_order":"books",
 		"location_to_pickup":"texas",
@@ -60,7 +60,7 @@ class TestUserDeliver(unittest.TestCase):
 
 	def test_post(self):
 		response = self.client.post('/api/v1/user', data=json.dumps(self.new_data), content_type='application/json')
-		result = json.loads(response.data)
+		result = json.loads(response.data.decode())
 		self.assertEqual(result['message'],'order is a success', msg="Assertion error not Equal" ) 
 
 	def test_getuser(self):
