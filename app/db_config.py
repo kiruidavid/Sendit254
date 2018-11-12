@@ -11,5 +11,8 @@ url = "dbname='sendit'.host='localhost'.port='5432'.user='postgres'.password='ro
 con = psycopg2.connect(url)
 cur = con.cursor()
 
+
+def 
+
 #closing the 
 con.close()

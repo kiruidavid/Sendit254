@@ -25,4 +25,25 @@ class UserDelivery(Resource, Users):
 class GetUsers(Resource, Users):
 	def get(self, user_id):
 		res = Users.get_user(self, user_id)
-		return res 
+		return res  
+
+
+class CreateUser(Resource, Users):
+	def post(self):
+		data = request.get_json(force=True)
+		email = data["email"]
+		phone_number = data["phone_number"]
+		user_name = data["user_name"]
+		password = data["password"]
+		
+
+
+		new_user = Users.create_account(self, email, phone_number, user_name, password)
+		return {'message': 'you created an account'}
+
+
+	def get(self):
+		res = Users.get_users(self)
+		return res
+		
+

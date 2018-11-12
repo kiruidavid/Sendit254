@@ -69,5 +69,33 @@ class TestUserDeliver(unittest.TestCase):
 
 
 
+class TestCreateUser(unittest.TestCase):
+	def setUp(self):
+		self.app = create_app()
+		self.client = self.app.test_client()
+		self.app_context = self.app.app_context()
+		self.app_context.push()  
 
 
+		self.new_user = {
+
+		"user_id": "1",
+		"email": "kim.we@grail.com",
+		"phone_number": "07342323",
+		"user_name": "kim1",
+		"password": "password12"
+		}
+
+
+	def test_post(self):
+		response = self.client.post('/api/v1/create', data=json.dumps(self.new_user), content_type='application/json')
+		result = json.loads(response.data.decode())
+		self.assertEqual(result['message'], 'you created an account', msg="Assertion error not Equal")
+		
+	def test_get(self):
+		response = self.client.post('/api/v1/create', data=json.dumps(self.new_user), content_type='application/json')
+		result = json.loads(response.data)
+
+
+		
+	
