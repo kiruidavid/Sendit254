@@ -1,6 +1,6 @@
 # SendIT
-[![Coverage Status](https://coveralls.io/repos/github/kiruidavid/SendIT254/badge.svg?branch=ch-made-test-pass-161860263)](https://coveralls.io/github/kiruidavid/SendIT254?branch=ch-made-test-pass-161860263) 
-[![Build Status](https://travis-ci.org/kiruidavid/SendIT254.svg?branch=develop)](https://travis-ci.org/kiruidavid/SendIT254)
+[![Build Status](https://travis-ci.org/kiruidavid/SendIT254.svg?branch=ft-log-in-161910556)](https://travis-ci.org/kiruidavid/SendIT254)
+[![Coverage Status](https://coveralls.io/repos/github/kiruidavid/SendIT254/badge.svg?branch=ch-made-test-pass-161860263)](https://coveralls.io/github/kiruidavid/SendIT254?branch=ch-made-test-pass-161860263)
 
 SendIT is a courier service that helps users deliver parcels to different destinations. SendIT provides courier quotes based on weight categories.
 
