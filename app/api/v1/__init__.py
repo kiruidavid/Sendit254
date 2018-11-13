@@ -1,7 +1,7 @@
 from flask import Blueprint
 from flask_restful import Api
 from app.api.v1.views.parcelviews import DataDelivery, SingleDelivery,CancelDelivery
-from app.api.v1.views.userviews import UserDelivery,GetUsers,CreateUser
+from app.api.v1.views.userviews import UserDelivery,GetUsers,CreateUser,Login
 
 
 
@@ -14,3 +14,4 @@ api.add_resource(CancelDelivery, "/cancel/<int:delivery_number>")
 api.add_resource(UserDelivery,"/user")
 api.add_resource(GetUsers, "/user/<int:user_id>")
 api.add_resource(CreateUser, "/create")
+api.add_resource(Login, "/login")

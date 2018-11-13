@@ -94,7 +94,28 @@ class TestCreateUser(unittest.TestCase):
 		
 	def test_get(self):
 		response = self.client.post('/api/v1/create', data=json.dumps(self.new_user), content_type='application/json')
-		result = json.loads(response.data)
+		result = json.loads(response.data) 
+
+class TestLogin(unittest.TestCase):
+	def setUp(self):
+		self.app = create_app()
+		self.client = self.app.test_client()
+		self.app_context = self.app.app_context()
+		self.app_context.push()  
+
+		self.log_in = {
+		"user_name":"kirui",
+		"password":"kiry",
+		"role":"User"
+	}	
+
+	def test_post(self):
+		response = self.client.post('/api/v1/login', data=json.dumps(self.log_in), content_type='application/json')
+		result = json.loads(response.data.decode())
+		self.assertEqual(result['message'], 'you are logged in', msg="Assertion error not Equal")
+
+
+
 
 
 		

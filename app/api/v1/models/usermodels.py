@@ -41,4 +41,19 @@ class Users(object):
 
 	def get_users(self):
 		res = self.db 
-		return res
+		return res 
+
+
+	def log_in(self, user_name, password, role):
+		log_in={
+		'user_name':user_name,
+		'password':password,
+		'role':role 
+		} 
+
+		if user_name == 'user_name' and password == 'password':
+			return log_in
+
+
+
+		

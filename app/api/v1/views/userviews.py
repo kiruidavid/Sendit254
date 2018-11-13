@@ -45,5 +45,17 @@ class CreateUser(Resource, Users):
 	def get(self):
 		res = Users.get_users(self)
 		return res
-		
+		 
+
+class Login(Resource, Users):
+	def post(self):
+		data = request.get_json(force=True)
+		user_name = data["user_name"]
+		password = data["password"]
+		role = data["role"]
+
+		log_in = Users.log_in(self, user_name, password, role)
+		return{'message':'you are logged in'}
+
+
 
