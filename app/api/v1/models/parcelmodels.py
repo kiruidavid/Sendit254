@@ -23,7 +23,7 @@ class Parcel(object):
             "parcel_type": parcel_type,
             "location_to_pickup": location_to_pickup,
             "location_to_deliver": location_to_deliver,
-            "status": str("pending")
+            "status": "pending"
         }
 
         self.db.append(payload)

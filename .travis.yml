@@ -14,5 +14,5 @@ install:
  - nosetests --with-coverage-package=app 
 
  after success:
-  - coveralls
+  - coveralls 
 
